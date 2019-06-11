@@ -4,12 +4,17 @@
 
     <sitemap>
         <loc>https://sjxswgjhf.github.io/blog/post-sitemap.xml</loc>
-        <lastmod>2019-06-11T15:20:10.000Z</lastmod>
+        <lastmod>2019-06-11T20:09:21.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://sjxswgjhf.github.io/blog/page-sitemap.xml</loc>
-        <lastmod>2019-06-11T15:24:28.000Z</lastmod>
+        <lastmod>2019-06-11T17:22:58.000Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://sjxswgjhf.github.io/blog/tag-sitemap.xml</loc>
+        <lastmod>2019-06-11T20:09:21.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>
