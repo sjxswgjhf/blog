@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('')
+            background-image: url('hexo.png')
             /*post*/
         
     }
@@ -214,13 +214,43 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>站在了大佬Ted Qiu的肩膀上，按照了他的post用Hexo搭建了个人blog，感谢大佬的帮助! Hexo是个由md文件来渲染出HTML文本的工具，可以说是节省了大量的开发时间，还是很nice的。网上也有大量的教程可以参考。这里我分享三个连接:</p>
-<ul>
+                <p>站在了大佬Ted Qiu的肩膀上，按照了他的post用Hexo搭建了个人blog，感谢大佬的帮助! Hexo是个专为blog开发的framework, 由md文件的编写来渲染出HTML文本的工具，可以说是节省了大量的开发时间，还是很nice的。网上也有大量的教程可以参考。链接分享:</p>
+<ul id="链接">
 <li><a href="https://godweiyang.com/2018/04/13/hexo-blog/#%E8%BF%9E%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0" target="_blank" rel="noopener">Weiyang大佬的完整Blog教程</a></li>
 <li><a href="https://qiutedyuan.github.io/blog/2019/06/01/%E5%A6%82%E4%BD%95%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlog/" target="_blank" rel="noopener">Ted大佬的教程跟避雷指南</a></li>
 <li><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo官方Docs英文版</a></li>
 <li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo中文文档</a></li>
 </ul>
+<h1>Node.js安装</h1>
+<p>首先下载安装最新版本<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p>
+<p>如果不确定是否安装过，可以打开terminal输入<code>node -v</code>和<code>npm -v</code>来确定。</p>
+<h1>Github</h1>
+<p>作为个程序猿，<a href="https://github.com/" target="_blank" rel="noopener">Github</a>还是必备的, 详细步骤请自行阅读官方文档或者阅读<a href="https://godweiyang.com/2018/04/13/hexo-blog/#%E5%AE%89%E8%A3%85Git" target="_blank" rel="noopener">weiyang blog</a>, 里面也有详细的教程, 当完成github的部署之后就可以从GitHub去public个人blog了. 详见Ted的<a href="https://qiutedyuan.github.io/blog/2019/06/01/%E5%A6%82%E4%BD%95%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlog/#%E4%BD%BF%E7%94%A8github-pages" target="_blank" rel="noopener">post</a></p>
+<h1>安装Hexo</h1>
+<p>当完成项目文件夹创建之后，打开Terminal，cd到项目目录下，输入<code>npm install hexo-cli-g</code>安装Hexo.</p>
+<p>然后输入<code>npm install hexo --save</code>继续安装</p>
+<p>通过<code>hexo -v</code>来进行验证.</p>
+<p>初始化个人blog，输入<code>hexo init</code>初始化文件夹(注意，目录必须为空，否则会报错)，接着输入<code>npm install</code>安装必备的组件</p>
+<p>配置完成之后，输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，本地域名默认为：http://localhost:4000/</p>
+<img src="initialhexo.jpg">
+<p>按<code>ctrl+c</code>关闭本地服务器, 这里给个小建议，在运行本地服务器的时候，可以使用<code>hexo s -debug</code>，当修改并保存文件之后，网页会自动更新，避免了一次次的重启服务器.</p>
+<p>Mac系统，如果安装过程成遇到了permission deny问题，请在命令前输入<code>sudo</code></p>
+<h1>主题修改</h1>
+<p>这里使用了<a href="http://beantech.org/" target="_blank" rel="noopener">Bean Tech</a>主题，<a href="https://github.com/YenYuHsuan/hexo-theme-beantech" target="_blank" rel="noopener">Github</a>上clone到本地. 注意当前terminal的根目录.</p>
+<p><code>git clone https://github.com/YenYuHsuan/hexo-theme-beantech ./hexo-beantech</code></p>
+<p>clone完之后需要覆盖本地文件，<code>cp -r hexo-beantech/. ./</code></p>
+<p>再执行<code>npm install</code>,再运行<code>hexo clean && hexo g && hexo s -debug</code>运行本地blog, 效果如图</p>
+<img src="result.png">
+<h1>个人配置</h1>
+<p>在Ted的<a href="https://qiutedyuan.github.io/blog/2019/06/01/%E5%A6%82%E4%BD%95%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlog/#%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">post</a>中已经有详细的解释跟教程，不再重复介绍</p>
+<p>有个注意的地方是timezone，如果timezone的代码不对的话会报错<code>cannot read property 'utcoffset' of null</code>,详情<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">官方文档</a></p>
+<h1>Bug修复</h1>
+<p>右边side bar跟图片重叠，这个需要到css里的toc.styl的修改<br>
+<code>.toc-article</code><br>
+<code>position: absolute</code><br>
+<code>border-left: rgba(88,88,88,0.1) 1px solid</code><br>
+<code>padding 1em 1em 0 1em</code><br>
+<code>margin-left: 1em</code></p>
 
                 
 
@@ -256,7 +286,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Node.js安装</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Github</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">安装Hexo</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">主题修改</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">个人配置</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Bug修复</span></a></li></ol>
         
         </div>
       </aside>
