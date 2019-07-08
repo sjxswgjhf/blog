@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Archive - JiaxinSun | Blog
+          AngularJs EventEmitter - JiaxinSun | Blog
         
     </title>
 
-    <link rel="canonical" href="https://sjxswgjhf.github.io/blog/blog/archive/">
+    <link rel="canonical" href="https://sjxswgjhf.github.io/blog/blog/2019/07/08/third-post/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -69,8 +69,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/blog/archive/index/england.jpg')
-            /*page*/
+            background-image: url('newyork.jpg')
+            /*post*/
         
     }
     
@@ -87,10 +87,20 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>Archive</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">Hey, this is archive.</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/blog/tags/#AngularJs" title="AngularJs">AngularJs</a>
+                            
+                              <a class="tag" href="/blog/tags/#EventEmitter" title="EventEmitter">EventEmitter</a>
+                            
+                        </div>
+                        <h1>AngularJs EventEmitter</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Jiaxin Sun on
+                            2019-07-08
+                        </span>
                     </div>
                 
 
@@ -193,258 +203,154 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-             <!-- 归档列表 -->
+                <h1>AngularJS 学习笔记: EventEmitter</h1>
+<p>跟着Udemy自学MeanStack的课程，遇到一个EventEmitter， Output， Input</p>
+<h3>什么是@Output？</h3>
+<p>Decorator that marks a class field as an output property and supplies configuration metadata. The DOM property bound to the output property is automatically updated during change detection.</p>
+<p>一个装饰器，用于把一个类字段标记为输出属性，并提供配置元数据。 凡是绑定到输出属性上的 DOM 属性，Angular 在变更检测期间都会自动进行更新。</p>
+<p>简单来讲就是执行父组件的eventHandler函数，并把子组件的参数传递给了父组件。</p>
+<h3>什么是@Input？</h3>
+<p>Decorator that marks a class field as an input property and supplies configuration metadata. The input property is bound to a DOM property in the template. During change detection, Angular automatically updates the data property with the DOM property's value.</p>
+<p>一个装饰器，用来把某个类字段标记为输入属性，并提供配置元数据。 该输入属性会绑定到模板中的某个 DOM 属性。当变更检测时，Angular 会自动使用这个 DOM 属性的值来更新此数据属性。</p>
+<p>简单来讲就是子组件的监听器，用来监听父组件，当父组件的参数发生变化，那么子组件也会监听到这个变化。</p>
+<h3>什么是EventEmitter?</h3>
+<p>官方定义：Use in directives and components to emit custom events synchronously or asynchronously, and register handlers for those events by subscribing to an instance.</p>
+<p>EventEmitter extends Subject，而Angular中的Subject是一个特殊的Observable，他可以将值传播给多个观察者，每个subject可以被订阅，那么也就是说我们通过EnentEmitter.emit(value: T)这个操作把值传入到发射器中，那么别的组件就可以订阅到这个值。</p>
+<hr>
+<h2>愿生活不止眼前的苟且...</h2>
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li>
-                    07-08
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/07/08/third-post/" style="color: #0085a1">
-                        <span>
-                            AngularJs EventEmitter
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li>
-                    06-20
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/06/20/second-post/" style="color: #0085a1">
-                        <span>
-                            localStorage学习
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li>
-                    06-11
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/06/11/hexo-tutoril/" style="color: #0085a1">
-                        <span>
-                            hexo简单教程与问题
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li>
-                    06-11
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/06/11/first-post/" style="color: #0085a1">
-                        <span>
-                            个人Blog成功建立
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/blog/2019/06/20/second-post/" data-toggle="tooltip" data-placement="top" title="localStorage学习">Next Post &rarr;</a>
+                        </li>
+                    
                 </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
             </div>
             
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">AngularJS 学习笔记: EventEmitter</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">什么是@Output？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">什么是@Input？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">什么是EventEmitter?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">愿生活不止眼前的苟且...</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
 
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/blog/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/blog/tags/#AngularJs" title="AngularJs">AngularJs</a>
+                        
+                          <a class="tag" href="/blog/tags/#EventEmitter" title="EventEmitter">EventEmitter</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://qiutedyuan.github.io/blog/" target="_blank">Yuan Qiu</a></li>
+                    
+                </ul>
+                
+            </div>
         </div>
     </div>
-</div>
-
-                <!-- 如果开启评论功能 -->
-                
-                    <hr>
-
-                    
-
-                    
+</article>
 
 
-                    
 
-                    
-                
-            </div>
 
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
 
-<section>
-    <!-- no hr -->
-    <h5><a href="/blog/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/blog/tags/#hexo" title="hexo" rel="2">hexo</a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-</section>
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/blog/about/">ABOUT ME</a></h5>
-    <div class="short-about">
 
-        
-            <img id="avatar_pic" src="/blog/img/jiaxin.jpg">
-        
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '>'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        
-            <p>Hi, I&#39;m Jiaxin Sun</p>
-        
+<script type="text/javascript" src="/blog/js/zooming.js"></script>
 
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank" href="https://www.facebook.com/jiaxin.sun.73">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-                <li>
-                    <a target="_blank" href="https://github.com/sjxswgjhf">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-                <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/jiaxin-sun-90a169166">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-        </ul>
-    </div>
-</section>
-        <hr>
-    
-        
-  <h5>RECENT POSTS
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/blog/2019/07/08/third-post/">AngularJs EventEmitter</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2019/06/20/second-post/">localStorage学习</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2019/06/11/hexo-tutoril/">hexo简单教程与问题</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2019/06/11/first-post/">个人Blog成功建立</a>
-        </li>
-      
-    </ul>
-  </div>
-</h5>
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>FRIENDS</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://qiutedyuan.github.io/blog/" target="_blank">Yuan Qiu</a></li>
-    
-</ul>
-
-        <hr>
-    
-</div>
-
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
